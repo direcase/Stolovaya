@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        
+
+        body{
+            width: 100%;
+            font-size: 9pt;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: none;
+            margin: 0px;
+            box-sizing: border-box;
+            padding: 0px;
+            background-color:#f5f2f2;
+        }
+        header{
+            width: 100%;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            
+            padding-left: 110px; 
+            padding-right: 80px;
+        }
+        nav{
+            background-color: #00ac4a;
+        }
+
+        nav li {
+          float: left;
+          
+        }
+        a{
+            text-decoration: none;
+        }
+        nav li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 10px 15px;
+          font-size: 8pt;
+        }
+        
+        nav li a:hover {
+          background-color: #111;
+        }
+        .header_main{
+            background-color: #e9e8e8;
+            height: 45px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between ;
+            padding-left: 110px; 
+            padding-right: 110px;
+        }
+        .header_main button{
+            background-color:#ffb129 ;
+            color: white;
+        }
+        .header_categories{
+            padding-top: 5px;
+            padding-left: 110px; 
+            padding-right: 110px;
+            font-size: 8pt;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between ;
+        }
+        .header_category_item{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+        .header_category_item_image{
+            margin: auto;
+        }
+        .header_category_item p{
+            margin-top: -1px;
+        }
+        main.main-part-content .main-section-one{
+            display: flex;
+            padding-left: 110px;
+            padding-right: 25px;
+        }
+        main{
+            width: 100%;
+        }
+        
+        
+        .main-menu-offers, .main-addvertice-banner,.main-slider{
+            margin: 15px;
+        }
+        .main-menu-offers{
+            text-align: center;
+            width: 230px;
+            background-color: white;
+        }
+        .main-menu-offers ul{
+            list-style-type: none;
+            background-color: white;
+        }
+        .main-menu-offers ul li{
+            float: left;
+            font-size: 9pt;
+            padding: 5px;
+            height:20px;
+            position:relative
+        }
+        .main-addvertice-banner{
+            width: 210px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .main-slider{
+            width: 690px;
+            padding-left: 20px;
+            background-color: black;
+            color: white;
+        }
+        .brands{
+            background-color: white;
+           
+            margin-left: 125px;
+            margin-right: 40px;
+        }
+        .brand_item{
+            padding-top:20px;
+            padding-bottom: 10px;
+        }
+        .main_page_news{
+            margin-top: 125px;
+            margin-left: 170px;
+        }
+        .news-block{
+            margin-top: 35px;
+            
+            display: flex;
+            flex-direction: row;
+
+        }
+        .news-block-left{
+            width: 345px;
+            margin-right: 75px;
+        }
+        .news-inline{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 12px;
+        }
+        .news-inline-description{
+            margin-left: 15px;
+            margin-top: -15px;
+        }
+        .news-description-title{
+            font-size: 12pt;
+            margin-top: -15px;
+        }
+        .news-title-second-line{
+            margin-top: -20px;
+        }
+        
+        .recommendation{
+            margin: 100px;
+            margin-top: 100px;
+            
+            text-align: center;
+        }
+        .recommend-title{
+            font-size: 19pt;
+            text-align: center;
+            padding-left: -170px;
+        }
+        .recommend-subtitle{
+            font-size: 8pt;
+            color: grey;
+            text-align: center;
+        }
+        .recomment-card-content{
+            margin-top: 50px;
+            padding-left: 170px;
+            display: grid;
+            grid-template-columns: 330px 550px ;
+            grid-template-rows:300px 220px;
+            grid-column-gap: 170px;
+        }
+        .recomment-card-left{
+            width: 330px;
+            background-color: white;
+            padding: 45px;
+            margin-left: -80px;
+            height:440px;
+            margin-bottom: -10px;
+            text-align: center;
+        }
+        .recomment-card-right{
+            width: 550px;
+            display: flex;
+            flex-direction: column;
+            margin-left: -155px;
+        }
+        .recomment-card-right-top{
+            height: 300px;
+            background-color: rgb(66, 66, 66);
+            margin-bottom: 10px;
+        }
+        .recomment-card-right-top, .recomment-card-right-bottom{
+            display: flex;
+            flex-direction: row;
+            
+            text-align: start;
+        }
+        .recomment-card-right-bottom{
+            height: 220px;
+            background-color: white;
+            
+        }
+        .recomend-cards_bottom_left_item_content_name,.recomend-cards_top-right_item_content_name{
+            font-size: 11pt;
+            
+        }
+        .recomend-cards_bottom_left_item_content_category, .recomend-cards_top-right_item_content_category{
+            font-size: 15pt;
+        }
+        .recomend-cards_bottom_left_item_content_description,.recomend-cards_bottom_right_item_content_description, .recomend-cards_top-right_item_content_description{
+            color: grey;
+            font-size: 8.5pt;
+        }
+        .recomend-cards_bottom_left_item_content_description{
+            
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+        .recomend-cards_bottom_right_item_content_description{
+            margin-right: 10px;
+        }
+        .recomment-card-left picture img{
+            padding-top: 15px;
+            margin-bottom: -200px;
+            
+        }
+        .recomment-card-right-top picture img{
+            height: 328px;
+            width: 165px;
+            margin-top: -10px;
+        }
+        .recomend-cards_top-right_item_content_name, .recomend-cards_top-right_item_content_category{
+            color: white;
+            
+        }
+        .recomend-cards_top-right_item_content_name, .recomend-cards_top-right_item_content_category{
+            margin-right: 150px;
+        }
+        .recomend-cards_top-right_item_content_description{
+            margin-right: 125px;
+        }
+        .recomend-cards-top-right-item-content{
+            margin-top: 80px;
+            margin-left: 10px;
+
+        }
+        .recomend-cards-bottom-right-item-content{
+            margin-top: 55px;
+            margin-left: 40px;
+            text-align: start;
+        }
+        .company-decsription{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .company-complex-solution-title, .company-decsription-right-title{
+            font-size: 20pt;
+        }
+        .company-decsription-right-title{
+            margin-top: 10px;
+            padding-top: 5px;
+        }
+        .company-decsription-right{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            text-align: start;
+            padding-left: 150px;
+            margin-right: -145px;
+        }
+        
+        .company-complex-solution p{
+            font-size: 9pt;
+        }
+        .company-complex-solution{
+            text-align: start;
+            width: 53%;
+        }
+        .company-offers-title{
+            font-size: 20pt;
+        }
+        .company-complex-solution-desc{
+            margin-top: -15px;
+        }
+        .company-decsription-right-p, .company-decsription-right-2p{
+            color: grey;
+        }
+        .company-decsription-right-p{
+            font-size: 8pt;
+            margin-top: -5px;
+        }
+        .company-decsription-right-2p{
+            font-size: 10pt;
+            margin-top: -2px;
+
+        }
+        .company-description-right-center{
+            margin-top: 18px;
+        }
+        .company-description-right-subitle{
+            font-size: 12pt;
+            margin-top: 10px;
+        }
+        .company-decsription-right-bottom{
+            margin-top: 7px;
+            margin-left: 6px;
+
+        }
+        main{
+            padding-bottom: 200px;
+        }
+        .footer-information-top{
+            margin-top: -100px;
+            padding: 60px 105px  ;
+            background-color: #1e1e1e;
+            padding-left: 170px;
+            padding-bottom: 68px;
+            
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 130px;
+        }
+        .footer-content-info-title{
+            color:#686868 ;
+            font-size: 13pt;
+            margin-bottom: 3px;
+            padding-bottom: 4px;
+        }
+        .footer-information-top p a{
+            color: rgb(216, 215, 215);
+            font-size: 8pt;
+        }
+        .footer-information-top p{
+            margin-bottom: -11px;
+        }
+        .footer-content-offers{
+            margin-left: 5px;
+        }
+        .footer-content-contacts{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .footer-content-contacts-p{
+            margin-top: -10px;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .footer-content-contacts-p p{
+            margin-bottom: -14px;
+        }
+        .footer-content-contacts-p-gap{
+           padding-top: 15px;
+        }
+        .footer-information-bottom{
+            background-color: #121212;
+            color: white;
+            padding: 27px 167px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .footer-logo-name{
+            display: grid;
+            grid-template-columns: 35px 270px;
+            grid-column-gap:5px ;
+
+        }
+        .footer-comnany-name{
+            margin-top: -1px;
+            font-size: 12pt;
+        }
+        .footer-logo-name picture{
+            margin-top: 3px;
+        }
+       
+        .footer-comnany-desc{
+            color: #686868;
+            font-size: 8.5pt;
+            margin-top: -2px;
+        }
+        .footer-comnany-website{
+            color: rgb(226, 226, 221);
+            font-size: 9.5pt;
+            margin-top: -4px;
+            margin-right: -56px;
+        }
+        @media screen and (max-width: 1920px) {
+            
+            .main-section-one{
+                display: flex;
+                flex-direction:row;
+            }
+            .brands{
+                display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            }
+        } 
+        @media screen and (max-width: 767px) {
+            .main-section-one{
+                display: flex;
+                flex-direction:column;
+            }
+            .main-menu-offers, .main-slider, .main-addvertice-banner{
+                width: 100%;
+            }
+            nav, .header_main-search p{
+                display: none;
+            }
+            .brands{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+            .main_page_news{
+                display: none;
+            }
+            .recomment-card-content{
+                display: flex;
+                flex-direction:column;
+            }
+            .recomment-card-right{
+                 display: flex;
+                flex-direction:column;
+            }
+            .recomment-card-right-top, .recomment-card-right-bottom, .recomment-card-left{
+                width: 100%;
+            }
+        }
+        
+    </style>
+    
+    <header>
+        <nav><ul>
+            <li>
+                <a href="">Компания</a>
+            </li>
+            <li>
+                <a href="">Портфолио</a>
+            </li>
+            <li>
+                <a href="">Проектирование</a>
+            </li>
+            
+            <li>
+                <a href="">Ресторанам</a> 
+            </li>
+            <li>
+                <a href="">Застройщикам</a> 
+            </li>
+            <li>
+                <a href="">Гос.заказчикам</a>
+            </li>
+            <li>
+                <a href="">Таблет-питание</a> 
+            </li>
+    
+            <li>
+                <a href="">Сервис</a>
+            </li>
+            <li>
+                <a href="">Контакты</a>
+            </li>
+            <li>
+                <a href=""><i class="fa fa-envelope" ></i> info@stolovay.ru</a> 
+            </li>
+            <li>
+                <a href=""><i class="fa fa-phone" aria-hidden="true" style="font-size:15px"></i> 8 495 790-72-05</a> 
+            </li>
+        </ul></nav>
+
+        <div class="header_main">
+        <picture>
+            <!--<img src="./main_icon.webp" alt="Logo">-->
+        </picture>
+        <h2>Столовая.РУ</h2>
+        <div class="header_main-search"> 
+            <select>
+                <option>Все</option>
+            </select>
+            <input type="text">
+            <button><i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </div>
+        <p>Мы на портале поставщиков</p>
+        <p>Сумма 150 000 руб.</p>
+
+    </div>
+
+    <div class="header_categories">
+        <div class="header_category_item">
+            <div class="header_category_item_image"><img width="40px" src="./img/category-1.png" alt="teplovoie-img"></div>
+            <p>Тепловое</p>
+            
+        </div>
+        <div class="header_category_item">
+            <div class="header_category_item_image">
+            <img width="40px" src="./img/category-2.png" alt="teplovoie-img"></div>
+            <p>Холодильное</p>
+            
+        </div>
+        <div class="header_category_item">
+            <div class="header_category_item_image"><img width="40px" src="./img/category-3.png" alt="teplovoie-img"></div>
+            
+            <p>Электомеханическое</p></div>
+        <div class="header_category_item">
+            <div class="header_category_item_image"><img width="40px" src="./img/category-4.png" alt="teplovoie-img"></div> 
+            <p>Посудомоечное</p></div>
+        <div class="header_category_item">
+            <div class="header_category_item_image"><img width="40px" src="./img/category-5.png" alt="teplovoie-img"></div>
+            
+            <p>Хлебопекарное</p></div>
+        <div class="header_category_item">
+            <div class="header_category_item_image"><img width="40px" src="./img/category-6.png" alt="teplovoie-img"></div>
+            
+            <p>Линии раздачи</p></div>
+        <div class="header_category_item">
+            <div class="header_category_item_image"><img width="40px" src="./img/category-7.png" alt="teplovoie-img"></div>
+            <p>Нейтральное</p></div>
+        <div class="header_category_item">
+            <div class="header_category_item_image"><img width="40px" src="./img/category-8.png" alt="teplovoie-img"></div>
+            <p>Для фаст фуда</p></div>
+        <div class="header_category_item">
+            <div class="header_category_item_image"><img width="40px" src="./img/category-9.png" alt="teplovoie-img"></div>
+            <p>Для залов</p></div>
+        <div class="header_category_item">
+            <div class="header_category_item_image"><img width="40px" src="./img/category-10.png" alt="teplovoie-img"></div>
+            <p>Вспомогательное</p></div>
+        <div class="header_category_item">
+            <div class="header_category_item_image"><img width="40px" src="./img/category-11.png" alt="teplovoie-img"></div>
+            <p>Для магазинов</p>
+        </div>
+
+    </div>
+
+    </header>
+    
+
+    
+
+    <main class="main-part-content">
+        <div>
+            <section class="main-section-one">
+                <div class="main-menu-offers">
+                    <h4>Целевые предложения</h4> 
+                    <ul>
+                        <li><a> Кафе, барам, ресторанам <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a href=" ">Детским садам и школам <i class="fa fa-angle-right" aria-hidden="true"></i></a> </li>
+                        <li><a>Таблет-питание <i class="fa fa-angle-right" aria-hidden="true"></i></a></li> 
+                        <li><a> Для столовых<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a>Для пищеблоков <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a> Государственным заказам<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li> <a>Для магазинов <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a> Для войсковых частей<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a> Все предложения<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+    
+                <div class="main-slider">
+                    <p>Портфолио</p>
+                    <div>НИИ скорой помощи им.Н.В. Склифосовского Оборудование для пищеблоков</div>
+                    <button>Подробнее</button>
+                    
+                </div>
+    
+                <div class="main-addvertice-banner">
+                    <picture>
+                        <img src="./img/main-add-banner.png" alt="add-banner">
+                    </picture>
+                    <p>Самые низкие цены</p>
+                    <h2>Распродажа</h2>
+                    <p>Каталог распродаж</p>
+    
+                </div>
+            </section>
+    
+            <section class="brands">
+                <div class="brand_item">
+                    <picture>
+                        <img src="./img/brand-1.png" alt="brand-n1">
+                    </picture>
+                </div>
+                <div class="brand_item">
+                    <picture>
+                        <img src="./img/brand-2.png" alt="brand-n1">
+                    </picture>
+                </div>
+                <div class="brand_item">
+                    <picture>
+                        <img src="./img/brand-3.png" alt="brand-n1">
+                    </picture>
+                </div>
+                <div class="brand_item">
+                    <picture>
+                        <img src="./img/brand-4.png" alt="brand-n1">
+                    </picture>
+                </div>
+                <div class="brand_item">
+                    <picture>
+                        <img src="./img/brand-5.png" alt="brand-n1">
+                    </picture>
+                </div>
+                <div class="brand_item">
+                    <p>Все бренды</p>
+                </div>
+            </section>
+        </div>
+        
+
+        <section class="main_page_news">
+            <h2>Новости производителей</h2>
+            <div class="news-block">
+                <article class="news-block-left">
+                    <picture>
+                        <img width="345px" src="./img/news-page-content.png" alt="news photo">
+                    </picture>
+                    <div>
+                        <p>Abat</p>
+                        <h4>Новый разборный ротационный пекарский шкаф РПШ-18-8-6МР</h4>
+                        <p>Новый разборный ротационный пекарский шкаф РПШ-18-8-6МР: в комплекте тележка-шпилька ТШГ-18 на 18 уровней 600х800 мм вместимость тележки-шпильки - 135 хлебных форм №7 инжекционный тип парообразования разборная
+                            конструкция увеличенное стекло двери. Память на 110 программ (до 4-ех этапов в каждой программе) USB-порт. Таймер до 10 ч Регулировка влажности от 0 до 100%. 5 cкоро</p>
+                            <button>Все новости</button>
+                    </div>
+                </article>
+                <article  class="news-block-right">
+                    <div class="news-inline">
+                        <picture>
+                            <img width="135px" src="./img/news-item-1.png" alt="n1 item news">
+                        </picture>
+                        <div class="news-inline-description">
+                            <p>Abat</p>
+                            <div class="news-description-title">
+                                <p>Повышение энергоэффективности туннельных</p>
+                                <p class="news-title-second-line">посудомоечных машин МПТ торговой марки Abat </p>
+                            </div>
+                            <p>C целью снижения нагрузки на электрическую сеть и для повышения энергоэффективности изделий с 1 июня 2017 года был изменен алгоритм работы туннельных посудомоечных машин МПТ торговой марки Abat всех моделей...</p>
+                        </div>
+                    </div>
+                    <div class="news-inline">
+                        <picture>
+                            <img width="135px" src="./img/news-item-2.png" alt="n1 item news">
+                        </picture>
+                        <div class="news-inline-description">
+                            <p>Abat</p>
+                            <div class="news-description-title">
+                                <p>Повышение энергоэффективности туннельных</p>
+                                <p class="news-title-second-line">посудомоечных машин МПТ торговой марки Abat </p>
+                            </div>
+                            <p>C целью снижения нагрузки на электрическую сеть и для повышения энергоэффективности изделий с 1 июня 2017 года был изменен алгоритм работы туннельных посудомоечных машин МПТ торговой марки Abat всех моделей...</p>
+                        </div>
+                    </div>
+                    <div class="news-inline">
+                        <picture>
+                            <img width="135px" src="./img/news-item-1.png" alt="n1 item news">
+                        </picture>
+                        <div class="news-inline-description">
+                            <p>Abat</p>
+                            <div class="news-description-title">
+                                <p>Повышение энергоэффективности туннельных</p>
+                                <p class="news-title-second-line">посудомоечных машин МПТ торговой марки Abat </p>
+                            </div>
+                            <p>C целью снижения нагрузки на электрическую сеть и для повышения энергоэффективности изделий с 1 июня 2017 года был изменен алгоритм работы туннельных посудомоечных машин МПТ торговой марки Abat всех моделей...</p>
+                        </div>
+                    </div>
+
+
+                </article>
+                
+            </div>
+        </section>
+
+
+        <section class="recommendation">
+            <div class="recommend-title">Рекомендуем</div>
+            <p class="recommend-subtitle">В этих разделах вы можете получить подробную информацию о пищевом оборудовании для столовых, ресторанов и кафе ведущих производителей.</p>
+
+            <div class="recomment-card-content">
+                <div class="recomment-card-left">
+                    <div class="recomend-cards_bottom_left_item_content_name">RATIONAL</div>
+                    <div class="recomend-cards_bottom_left_item_content_category">Пароконвектоматы</div>
+                    <div class="recomend-cards_bottom_left_item_content_description">
+                         <p>Педантичность и преданность своему делу делает продукцию Rational идеальной для тех, кто ищет надежность и долговечность.</p>
+                    </div>
+                    <picture>
+                        <img width="300px" src="./img/recomend-1.png" alt="recommend item n1">
+                    </picture>
+                </div>
+                <div class="recomment-card-right">
+                    <div class="recomment-card-right-top">
+                        <picture>
+                            <img width="320px" src="./img/recomend-2.png">
+                        </picture>
+                        <div class="recomend-cards-top-right-item-content">
+                            <div class="recomend-cards_top-right_item_content_name">ABAT</div>
+                            <div class="recomend-cards_top-right_item_content_category">Тепловое оборудование</div>
+                            <div class="recomend-cards_top-right_item_content_description">
+                                 <p>Более 55 лет успешно работает на рынке  торгово-технологического оборудования, по праву занимая лидирующее положение в данном сегменте.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="recomment-card-right-bottom">
+                        <div class="recomend-cards-bottom-right-item-content">
+                            <div class="recomend-cards_bottom_left_item_content_name">HICOLD</div>
+                            <div class="recomend-cards_bottom_left_item_content_category">Холодильные столы</div>
+                            <div class="recomend-cards_bottom_right_item_content_description">
+                                 <p>Многофункциональность оборудования позволяет оптимизировать пространство на кухне, сделать работу персонала максимально удобной и эффективной.</p>
+                            </div>
+                        </div>
+                        
+
+                        <picture>
+                            <img width="210px" src="./img/recomend-3.png">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="company-decsription">
+                <div class="company-complex-solution">
+                    <div class="company-complex-solution-title">
+                        Комплексные решения оснащения столовых и кафе
+                    </div>
+                    <p>
+                        Компания предлагает комплексное оснащение столовых, ресторанов, кафе и баров в Москве. Наши услуги построены по принципу полного цикла обслуживания предприятий общепита и бизнеса HoReCa.
+                    </p>
+                    <p class="company-complex-solution-desc">
+                        Иными словами, мы предлагаем проектирование «под ключ» и постгарантийное обслуживание. География работы компании охватывает всю страну. При этом в каждом регионе мы готовы предложить демократичные цены на профессиональное технологическое оборудование для столовой и оптимальные решения с точки зрения эффективности бизнеса, приемлемым уровнем производительности в условиях ограниченного бюджета.
+                    </p>
+                    <div class="company-offers-title">
+                        Что мы предлагаем
+                    </div>
+                    <p>разработку технологического проекта кухни и производственной линии, дизайна ресторанного интерьера;
+
+                    </p>
+                    <p class="company-complex-solution-desc">
+                        составление меню согласно концепции и оснащения бара (кафе, столовой);
+                    </p>
+
+                    <p class="company-complex-solution-desc">
+                        подбор посуды, текстиля под общий стиль; профессиональное оборудование для кафе, бара и ресторана, большой выбор современных моделей; доставку в любой регион РФ;
+                    </p>
+                    <p class="company-complex-solution-desc">
+                        монтажные и пуско-наладочные работы; автоматизацию производственного процесса, что позволяет определённое оборудование для бара;
+                    </p>
+                </div>
+
+                <div class="company-decsription-right">
+                    <picture>
+                        <img width="110px" src="./img/main_icon.webp" alt="logo">
+                    </picture>
+                    <div class="company-decsription-right-bottom">
+                        <div> <span  class="company-decsription-right-title">Столовая.РУ</span> 
+                            <p class="company-decsription-right-p">cоздание оптимальных пищеблоков</p>
+                        </div>
+                        <div class="company-description-right-center">
+                            <div class="company-description-right-subitle">Группа компаний</div> 
+                            <p class="company-decsription-right-2p">Показатели:</p>
+    
+                        </div>
+                        <div>
+                            <span>На рынке: 5 лет</span>
+                            <span>Объём контрактов: 4млрд.р.</span>
+                            <span>Количество контактов: 620</span>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+
+    <footer>
+        <div class="footer-information-top">
+            <div class="footer-content-info">
+                <div class="footer-content-info-title">
+                    Информация
+                </div>
+                <div class="footer-content-info-p">
+                    <p><a href=""> Комапания</a></p>
+                    <p><a href="">Портфолио</a></p>
+                    <p><a href="">Проектирование</a></p>
+                    <p><a href="">Ресторанам</a></p>
+                    <p><a href="">Застройщикам</a></p>
+                    <p><a href="">Гос.заказчикам</a></p>
+                    <p><a href="">Таблет-питание</a></p>
+                    <p><a href="">Сервис</a></p>
+                    <p><a href="">Новости</a></p>
+                    <p><a href="">Контакты</a></p>
+                </div>
+                
+            </div>
+            <div >
+                <div class="footer-content-info-title">Оборудование</div>
+                <div class="footer-content-info-p">
+                    <p><a href=""> Тепловое</a></p>
+                    <p><a href="">Холодильное</a></p>
+                    <p><a href="">Электромеханическое</a></p>
+                    <p><a href="">Посудомоечное</a></p>
+                    <p><a href="">Барное</a></p>
+                    <p><a href="">Хлебопекарное</a></p>
+                    <p><a href="">Линии раздачи</a></p>
+                    <p><a href="">Нейтральное</a></p>
+                    <p><a href="">Для фаст фуда</a></p>
+                    <p><a href="">Для залов</a></p>
+                    <p><a href="">Весовое</a></p>
+                </div>
+            </div>
+            <div class="footer-content-offers">
+                <div class="footer-content-info-title">Предложения</div>
+                <div class="footer-content-info-p">
+                    <p><a href="">Кафе, барам, ресторанам</a></p>
+                    <p><a href="">Детским садам и школам</a></p>
+                    <p><a href="">Таблет-питание</a></p>
+                    <p><a href="">Для кондитерских</a></p>
+                    <p><a href="">Для пиццерий</a></p>
+                    <p><a href="">Для магазинов</a></p>
+                    <p><a href="">Для воинских частей</a></p>
+                    <p><a href="">Все предложения</a></p>
+                </div>
+            </div>
+            <div class="footer-content-contacts">
+                <div class="footer-content-info-title">Контакты</div>
+                <div class="footer-content-contacts-p">
+                    <p><a href="">8 495 150-31-71</a></p>
+                    <p><a href="">8 800 500 43 44</a></p>
+                    <p><a href="">звонок бесплатный</a></p>
+                    <p class="footer-content-contacts-p-gap"><a href=""></a></p>
+                    <p><a href="">Пн-Пт </a></p>
+                    <p><a href="">09:00 до 18:00</a></p>
+                    <p class="footer-content-contacts-p-gap"><a href=""></a></p>
+                    <p><a href="">com@stolovay.ru</a></p>
+                    <p><a href="">info@stolovay.ru</a></p>
+                    <p  class="footer-content-contacts-p-gap"><a href=""></a></p>
+                    <p><a href="">111524,Москва, Рязански проспект 24к2</a></p>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-information-bottom">
+            <div class="footer-logo-name">
+                <picture>
+                    <img width="28px" src="./img/main_icon.webp" alt="logo">
+                </picture>
+                <div>
+                    <div class="footer-comnany-name">Столовая.РУ</div>
+                    <div class="footer-comnany-desc">Создание оптимальних пищеблоков</div>
+                </div>
+            </div>
+            
+            <div class="footer-comnany-website">Сайт разработан NTI-systems</div>
+
+        </div>
+    </footer>
+
+    
+</body>
+</html>
+
+
+
